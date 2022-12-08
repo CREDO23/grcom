@@ -1,13 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import tw from 'twrnc'
+import { NavigationContainer } from "@react-navigation/native";
+import { createStackNavigator } from "@react-navigation/stack";
+import Login from "./src/screens/connection/Login";
+
 
 export default function App() {
+  const Stack = createStackNavigator();
+
   return (
-    <View style={tw`flex items-center bg-slate-500 justify-center h-full`}>
-      <Text style={tw`text-white`}>Hellow les gars!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="login" component={Login}/>
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
