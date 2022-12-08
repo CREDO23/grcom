@@ -7,10 +7,10 @@ export default function App() {
   const Stack = createStackNavigator();
 
   return (
-    <NavigationContainer>
+        <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="login" component={Login}/>
+        <Stack.Screen name="login" options={{headerShown : false}} component={Login}/>
       </Stack.Navigator>
-    </NavigationContainer>
+    </NavigationContainer>  
   );
 }
