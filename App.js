@@ -1,6 +1,8 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Login from "./src/screens/connection/Login";
+import Singin from "./src/screens/connection/Singin";
+import Singup from "./src/screens/connection/Singup";
+
 
 
 export default function App() {
@@ -8,8 +10,9 @@ export default function App() {
 
   return (
         <NavigationContainer>
-      <Stack.Navigator>
-        <Stack.Screen name="login" options={{headerShown : false}} component={Login}/>
+      <Stack.Navigator screenOptions={{headerShown : false}}>
+        {/* <Stack.Screen name="singin" component={Singin}/> */}
+        <Stack.Screen name="singup"  component={Singup}/>
       </Stack.Navigator>
     </NavigationContainer>  
   );
