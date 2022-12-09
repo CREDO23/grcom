@@ -6,14 +6,14 @@ import CustomButton from "../../components/CustomButton";
 
 export default function () {
   return (
-    <SafeAreaView style={tw`flex-1 h-full bg-slate-200`}>
-      <ScrollView contentContainerStyle={tw`px-5 pt-16 flex h-full flex-col justify-around`}>
-        <View>
-          <Text style={tw`text-sky-900 text-4xl font-bold`}> Register</Text>
-          <Text style={tw` text-gray-400 text-base mx-2 `}>
-            Enter Your Details To Register
-          </Text>
-        </View>
+    <SafeAreaView style={tw`flex-row justify-center items-center flex-1 h-full w-full flex bg-slate-200`}>
+      <ScrollView
+        contentContainerStyle={tw`px-5 pt-16 flex w-full h-10/12 flex-col justify-around`}
+      >
+        
+        <Text style={tw`text-sky-900 text-4xl font-bold`}>Create an Account</Text>
+
+        
 
         <View>
           <CustomInput
@@ -38,9 +38,15 @@ export default function () {
             iconName="lock-outline"
             password="12345"
           />
-          <View style={tw`my-10`}>
-            <CustomButton title="Register" />
-            <CustomButton auxilliary={true} title="Login" />
+        </View>
+
+        <View>
+          <CustomButton title="CREATE" />
+          <View style={tw`flex flex-row ml-auto`}>
+            <Text style={tw`text-gray-400 font-light`}>
+              Already have an account ?
+            </Text>
+            <Text style={tw`mx-3 font-bold text-yellow-500`}>Singin</Text>
           </View>
         </View>
       </ScrollView>
