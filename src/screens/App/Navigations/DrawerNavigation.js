@@ -1,6 +1,6 @@
 
 import {createDrawerNavigator} from '@react-navigation/drawer'
-import Home from './Home'
+import Home from '../Home'
 
 
 

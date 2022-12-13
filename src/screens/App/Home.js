@@ -7,7 +7,7 @@ import { View } from "react-native";
 
 export default function () {
   return (
-    <SafeAreaView style={tw`p-3 h-full relative`}>
+    <SafeAreaView style={tw`px-3 pt-3 h-full relative`}>
       <Text style={tw` text-lg mb-2  font-medium text-gray-700`}>
         Mes Ruches :
       </Text>
@@ -26,11 +26,11 @@ export default function () {
       />
 
       <View
-        style={tw` flex w-16 border border-white h-16 justify-center items-center bottom-5 right-5 bg-sky-900 rounded-full absolute`}
+        style={tw` flex w-14 border border-white h-14 justify-center items-center bottom-5 right-5 bg-sky-900 rounded-full absolute`}
       >
         <Icon
           name="plus"
-          style={tw`text-5xl text-center font-extralight text-white`}
+          style={tw`text-xl text-center font-extralight text-white`}
         />
       </View>
     </SafeAreaView>

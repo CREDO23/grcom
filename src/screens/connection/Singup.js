@@ -4,7 +4,7 @@ import tw from "twrnc";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
 
-export default function ({navigation}) {
+export default function ({ navigation }) {
   return (
     <SafeAreaView
       style={tw`flex-row justify-center items-center flex-1 h-full w-full flex bg-slate-200`}
@@ -12,9 +12,14 @@ export default function ({navigation}) {
       <ScrollView
         contentContainerStyle={tw`px-5 pt-16 flex w-full h-10/12 flex-col justify-around`}
       >
-        <Text style={tw`text-sky-900 text-center text-4xl font-bold`}>
-          Create an Account
-        </Text>
+        <View>
+          <Text style={tw`text-sky-900 text-center text-4xl font-bold`}>
+            S'enregister
+          </Text>
+          <Text style={tw`text-gray-500 text-center text-base font-normal`}>
+            - Etes - vous un apiculteur ? -
+          </Text>
+        </View>
 
         <View>
           <CustomInput
@@ -42,12 +47,18 @@ export default function ({navigation}) {
         </View>
 
         <View>
-          <CustomButton onPress={() => navigation.navigate('singin')} title="CREATE" />
+          <CustomButton
+            onPress={() => navigation.navigate("singin")}
+            title="CREATE"
+          />
           <View style={tw`flex items-center flex-row ml-auto`}>
-            <Text  style={tw`text-gray-400 font-light`}>
+            <Text style={tw`text-gray-400 font-light`}>
               Already have an account ?
             </Text>
-            <Text onPress={() => navigation.navigate('singin')} style={tw`mx-3 font-medium text-base text-yellow-500`}>
+            <Text
+              onPress={() => navigation.navigate("singin")}
+              style={tw`mx-3 font-medium text-base text-yellow-500`}
+            >
               Singin
             </Text>
           </View>
