@@ -12,7 +12,7 @@ export default function ({
   ...props
 }) {
     const [isFocused , setIsFocused] = useState(false)
-    const [hidepassword , setHidePassword] = useState(false)
+    const [hidepassword , setHidePassword] = useState(true)
   return (
     <View style={tw`mb-5 `}>
       <Text style={tw` my-1 text-base text-gray-400 font-bold`}>{label}</Text>
@@ -21,7 +21,7 @@ export default function ({
       >
         <Icon style={tw` text-2xl text-yellow-500 mr-3`} name={iconName} />
         <TextInput
-        secureTextEntry={!hidepassword}
+        secureTextEntry={hidepassword}
           style={tw` text-base flex-1`}
           placeholderTextColor='rgb(150 ,160 ,170)'
           selectionColor='rgb(160 ,170 ,180)'
@@ -34,7 +34,7 @@ export default function ({
           onBlur={() => setIsFocused(false)}
         />
         {
-            password && <Icon onPress={() => setHidePassword(!hidepassword)} name={!hidepassword ? "eye-outline" : 'eye-off-outline'} style={tw`text-2xl text-gray-400`}/>
+            password && <Icon onPress={() => setHidePassword(!hidepassword)} name={hidepassword ? "eye-outline" : 'eye-off-outline'} style={tw`text-2xl text-gray-400`}/>
         }
       </View>
     </View>

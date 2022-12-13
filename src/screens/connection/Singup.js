@@ -12,7 +12,7 @@ export default function ({navigation}) {
       <ScrollView
         contentContainerStyle={tw`px-5 pt-16 flex w-full h-10/12 flex-col justify-around`}
       >
-        <Text style={tw`text-sky-900 text-4xl font-bold`}>
+        <Text style={tw`text-sky-900 text-center text-4xl font-bold`}>
           Create an Account
         </Text>
 

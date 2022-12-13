@@ -3,7 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Singin from "./src/screens/connection/Singin";
 import Singup from "./src/screens/connection/Singup";
-import Home from "./src/screens/Home";
+import Index from "./src/screens/App/Index";
 
 
 
@@ -15,7 +15,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown : false}}>
         <Stack.Screen name="singin" component={Singin}/>
         <Stack.Screen name="singup"   component={Singup}/>
-        <Stack.Screen name="Home" options={{headerShown : true , headerLeft:false }} component={Home}/>
+        <Stack.Screen name="Index"  component={Index}/>
       </Stack.Navigator>
     </NavigationContainer>  
   );

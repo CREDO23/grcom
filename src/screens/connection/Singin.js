@@ -31,7 +31,7 @@ export default function ({navigation}) {
         </View>
 
         <View>
-          <CustomButton onPress={() => navigation.navigate('Home')} title="LOGIN" />
+          <CustomButton onPress={() => navigation.navigate('Index')} title="LOGIN" />
           <View style={tw`flex items-center flex-row ml-auto`}>
             <Text style={tw`text-gray-400 font-light`}>
               Don't have an account ?
