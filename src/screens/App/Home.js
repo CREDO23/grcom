@@ -1,15 +1,38 @@
-import { SafeAreaView  , Text} from "react-native";
+import { SafeAreaView, Text, FlatList } from "react-native";
 import Hive from "../../components/Hive";
 import tw from "twrnc";
+import { data } from "../../../faker/MOCK_DATA";
+import Icon from "react-native-vector-icons/Entypo";
+import { View } from "react-native";
 
 export default function () {
   return (
-    <SafeAreaView style={tw`p-3`}>
-        <Text style={tw` text-lg mb-2  font-medium text-gray-700`}>Mes Ruches :</Text>
-        {
-            new Array(5).map(item => <Hive/>)
-        }
-      {/* <Hive /> */}
+    <SafeAreaView style={tw`p-3 h-full relative`}>
+      <Text style={tw` text-lg mb-2  font-medium text-gray-700`}>
+        Mes Ruches :
+      </Text>
+
+      <FlatList
+        showsVerticalScrollIndicator={false}
+        data={data}
+        keyExtractor={(item) => item.number}
+        renderItem={({ item }) => (
+          <Hive
+            name={item.name}
+            number={item.number}
+            temperature={item.temperature}
+          />
+        )}
+      />
+
+      <View
+        style={tw` flex w-16 border border-white h-16 justify-center items-center bottom-5 right-5 bg-sky-900 rounded-full absolute`}
+      >
+        <Icon
+          name="plus"
+          style={tw`text-5xl text-center font-extralight text-white`}
+        />
+      </View>
     </SafeAreaView>
   );
 }
