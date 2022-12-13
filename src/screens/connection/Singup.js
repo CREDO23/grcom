@@ -1,8 +1,9 @@
-import { SafeAreaView, Text, View } from "react-native";
-import { ScrollView } from "react-native-gesture-handler";
+import { SafeAreaView, Text, View , ScrollView } from "react-native";
 import tw from "twrnc";
 import CustomInput from "../../components/CustomInput";
 import CustomButton from "../../components/CustomButton";
+import ChoiceInput from "../../components/ChoiceInput";
+import Icon from "react-native-vector-icons/MaterialCommunityIcons"
 
 export default function ({ navigation }) {
   return (
@@ -10,10 +11,10 @@ export default function ({ navigation }) {
       style={tw`flex-row justify-center items-center flex-1 h-full w-full flex bg-slate-200`}
     >
       <ScrollView
-        contentContainerStyle={tw`px-5 pt-16 flex w-full h-10/12 flex-col justify-around`}
+        contentContainerStyle={tw`p-5 pt-10 flex w-full flex-col justify-around`}
       >
         <View>
-          <Text style={tw`text-sky-900 text-center text-4xl font-bold`}>
+          <Text style={tw`text-sky-900 text-center text-3xl`}>
             S'enregister
           </Text>
           <Text style={tw`text-gray-500 text-center text-base font-normal`}>
@@ -23,30 +24,72 @@ export default function ({ navigation }) {
 
         <View>
           <CustomInput
-            placeholder="Enter your user name"
-            label="User Name"
+            placeholder="Entrer voter nom"
+            label="Nom"
             iconName="account-outline"
           />
           <CustomInput
-            placeholder="Enter your email adress"
-            label="Email Adress"
-            iconName="email-outline"
+            placeholder="Enter votre postnom"
+            label="Post Nom"
+            iconName="account-outline"
           />
           <CustomInput
-            placeholder="Enter your password"
-            label="Password"
+            placeholder="Enter votre prenom"
+            label="Prenom"
+            iconName="account-outline"
+          />
+            <CustomInput
+            placeholder="Entrer votre numero de téléphone"
+            label="Numero de Téléphone"
             iconName="lock-outline"
             password="12345"
           />
           <CustomInput
-            placeholder="Confirm your password"
-            label="Confirm Password"
+            placeholder="Entrer votre mot de pass"
+            label="Mot de Pass"
             iconName="lock-outline"
             password="12345"
+          />
+         
+           <CustomInput
+            placeholder="Confirmer votre mot de pass"
+            label="Mot de Pass"
+            iconName="lock-outline"
+            password="12345"
+          />
+          <ChoiceInput
+            label="Genre"
+            choices={[
+              {
+                icon: () => <Icon name='face-woman' style={tw`text-2xl text-sky-900`} />,
+                brand: "Femme",
+              },
+              {
+                icon: () => <Icon name='face-man' style={tw`text-2xl text-sky-900`} />,
+                brand: "Home",
+              },
+            ]}
+          />
+          <ChoiceInput
+            label="Fonction"
+            choices={[
+              {
+                icon: "bee",
+                brand: "Apiculteur",
+              },
+              {
+                icon: "office-building-outline",
+                brand: "Fabricant",
+              },
+              {
+                icon: "face-man",
+                brand: "Formateur",
+              }
+            ]}
           />
         </View>
 
-        <View>
+        <View style={tw`my-8`}>
           <CustomButton
             onPress={() => navigation.navigate("singin")}
             title="CREATE"
@@ -57,7 +100,7 @@ export default function ({ navigation }) {
             </Text>
             <Text
               onPress={() => navigation.navigate("singin")}
-              style={tw`mx-3 font-medium text-base text-yellow-500`}
+              style={tw`mx-3 font-normal text-base text-yellow-500`}
             >
               Singin
             </Text>

@@ -9,7 +9,7 @@ export default function ({name , number , temperature}) {
       <View style={tw`w-8/12 h-full p-2 flex items-start justify-around `}>
         <Text style={tw` text-base font-light text-sky-900`}>Nom : <Text style={tw` font-semibold`}>{name}</Text></Text>
         <Text style={tw` text-base font-light text-sky-900`}>Numero : <Text style={tw` font-semibold`}>{number}</Text></Text>
-        <Text style={tw` text-base font-light text-sky-900`}>Température: <Text style={tw` font-semibold`}>{temperature}{' '}C</Text></Text>
+        <Text style={tw` text-base font-light text-sky-900`}>Température: <Text style={tw` font-semibold`}>{temperature}{' '}°C</Text></Text>
       </View>
       <View style={tw`w-4/12 h-full items-end flex justify-around `}>
         <AwesomeIcon
