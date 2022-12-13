@@ -21,7 +21,8 @@ export default function ({
       >
         <Icon style={tw` text-2xl text-yellow-500 mr-3`} name={iconName} />
         <TextInput
-        secureTextEntry={hidepassword}
+          keyboardType={iconName == 'phone' ? "number-pad" : "default"}
+          secureTextEntry={password && hidepassword}
           style={tw` text-base flex-1`}
           placeholderTextColor='rgb(150 ,160 ,170)'
           selectionColor='rgb(160 ,170 ,180)'

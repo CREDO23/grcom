@@ -11,11 +11,11 @@ import googleIcon from '../../Images/google.png'
 export default function ({ navigation }) {
   return (
     <SafeAreaView
-      style={tw`flex-row justify-center items-center flex-1 h-full w-full flex bg-slate-200`}
+    style={tw`flex-row justify-center items-center flex-1 h-full w-full flex bg-slate-200`}
+  >
+    <ScrollView
+      contentContainerStyle={tw`p-5 pt-10 flex w-full h-full flex-col justify-around`}
     >
-      <ScrollView
-        contentContainerStyle={tw`p-5 border h-full flex w-full flex-col justify-around`}
-      >
         <View style={tw`flex items-center justify-center`}>
         <Image
           style={tw` h-48 rounded-full w-48 border border-white`}
@@ -40,7 +40,7 @@ export default function ({ navigation }) {
           <CustomInput
             placeholder="Enter votre numero de téléphone"
             label="Numero de téléphone"
-            iconName="email-outline"
+            iconName="phone"
           />
           <CustomInput
             placeholder="Password"

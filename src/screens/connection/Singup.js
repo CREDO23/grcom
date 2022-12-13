@@ -41,8 +41,7 @@ export default function ({ navigation }) {
             <CustomInput
             placeholder="Entrer votre numero de téléphone"
             label="Numero de Téléphone"
-            iconName="lock-outline"
-            password="12345"
+            iconName="phone"
           />
           <CustomInput
             placeholder="Entrer votre mot de pass"
